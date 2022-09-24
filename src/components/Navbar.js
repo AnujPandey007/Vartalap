@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; 
 
 export default function Navbar() {
   return (
     <div className="mb-20">
-         <div className='fixed top-0 w-full z-20 flex flex-auto flex-row shadow shadow-blue-300 p-2 px-5 items-center justify-between text-sm'>
+         <div className='fixed top-0 w-full z-10 flex flex-auto flex-row bg-white shadow shadow-blue-300 p-2 px-5 items-center justify-between text-sm'>
             <div className="flex flex-row gap-6 items-center">
                 <Link to="/">
                     <div className="flex flex-col">
