@@ -4,16 +4,16 @@ import React from 'react'
 export default function Profile() {
   return (
     <div className='flex flex-col lg:flex-row'>
-      <div className="mx-20 my-5 w-70 bg-white rounded-lg border border-gray-200 flex items-center gap-5">
-        <div className='flex flex-col mx-auto items-center pb-5'>
-            <div className='h-20 w-20 mx-28 my-1 mb-10'>
+      <div className="mx-10 my-5 w-70 bg-white rounded-lg border border-gray-200 flex items-center gap-5">
+        <div className='flex flex-col mx-auto mt-5 items-center pb-5'>
+            <div className='h-20 w-20 mx-10 lg:mx-28 my-1 mb-10'>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-person-circle" viewBox="0 0 16 16">
                     <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                     <path fillRule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                 </svg>
             </div>
             <div className="flex flex-col items-center pb-5">
-               <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-dark">Anuj Kumar Pandey</h5>
+               <h5 className="mb-1 text-xl font-medium text-center text-gray-900 dark:text-dark">Anuj Kumar Pandey</h5>
                <span className="text-sm text-gray-500 dark:text-gray-400">Joined in 2022</span>
             </div>   
         </div>
