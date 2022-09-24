@@ -1,12 +1,64 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import ChatUsers from './ChatUsers';
 
 export default function Chat() {
+
+
+  const messageList = [
+    {
+      userID1 : "Arya",
+      userID2 : "Anuj",
+      roomID : "Anuj_Arya",
+      chatMessage: [
+        {
+          messageText: "Hi",
+          messageTime: "2 min",
+          sentBy: "Anuj"
+        },
+        {
+          messageText: "bye",
+          messageTime: "17 min",
+          sentBy: "Arya"
+        },
+        {
+          messageText: "Hi",
+          messageTime: "30 min",
+          sentBy: "Anuj"
+        },
+      ]
+    },
+    {
+      userID1 : "x",
+      userID2 : "y",
+      roomID : "y_x",
+      chatMessage: [
+        {
+          messageText: "Good",
+          messageTime: "1 hr",
+          sentBy: "y"
+        },
+        {
+          messageText: "lol",
+          messageTime: "2 hr",
+          sentBy: "x"
+        },
+        {
+          messageText: "what",
+          messageTime: "3 hr",
+          sentBy: "y"
+        },
+      ]
+    },
+  ]
+
   return (
     <div>
       <div className="container mx-auto">
         <div className="min-w-full border rounded lg:grid lg:grid-cols-3">
+
           <div className="border-r border-gray-300 lg:col-span-1">
+            {/* Search Icon */}
             <div className="mx-3 my-3">
               <div className="relative text-gray-600">
                 <span className="absolute inset-y-0 left-0 flex items-center pl-2">
@@ -22,21 +74,17 @@ export default function Chat() {
 
             <ul className="overflow-auto h-[32rem]">
               <h2 className="my-2 mb-2 ml-2 text-lg text-gray-600">Chats</h2>
+              
               <li>
+                {
+                  messageList.map((messageData)=>{
+                    return (<ChatUsers userName={messageData.userID1} chatTime={messageData.chatMessage[0].messageTime} chatMessage={messageData.chatMessage[0].messageText}/>);
+                  })
+                }
+                
+                {/* <ChatUsers />
                 <Link
-                  className="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out border-b border-gray-300 cursor-pointer hover:bg-gray-100 focus:outline-none">
-                  <img className="object-cover w-10 h-10 rounded-full"
-                    src="https://cdn.pixabay.com/photo/2018/09/12/12/14/man-3672010__340.jpg" alt="username" />
-                  <div className="w-full pb-2">
-                    <div className="flex justify-between">
-                      <span className="block ml-2 font-semibold text-gray-600">Jhon Don</span>
-                      <span className="block ml-2 text-sm text-gray-600">25 minutes</span>
-                    </div>
-                    <span className="block ml-2 text-sm text-gray-600">bye</span>
-                  </div>
-                </Link>
-                <Link
-                  className="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out bg-gray-100 border-b border-gray-300 cursor-pointer focus:outline-none">
+                  className="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out border-b border-gray-300 cursor-pointer bg-gray-100 focus:outline-none">
                   <img className="object-cover w-10 h-10 rounded-full"
                     src="https://cdn.pixabay.com/photo/2016/06/15/15/25/loudspeaker-1459128__340.png" alt="username" />
                   <div className="w-full pb-2">
@@ -46,22 +94,11 @@ export default function Chat() {
                     </div>
                     <span className="block ml-2 text-sm text-gray-600">Good night</span>
                   </div>
-                </Link>
-                <Link
-                  className="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out border-b border-gray-300 cursor-pointer hover:bg-gray-100 focus:outline-none">
-                  <img className="object-cover w-10 h-10 rounded-full"
-                    src="https://cdn.pixabay.com/photo/2018/01/15/07/51/woman-3083383__340.jpg" alt="username" />
-                  <div className="w-full pb-2">
-                    <div className="flex justify-between">
-                      <span className="block ml-2 font-semibold text-gray-600">Emma</span>
-                      <span className="block ml-2 text-sm text-gray-600">6 hour</span>
-                    </div>
-                    <span className="block ml-2 text-sm text-gray-600">Good Morning</span>
-                  </div>
-                </Link>
+                </Link> */}
               </li>
             </ul>
           </div>
+
           <div className="hidden lg:col-span-2 lg:block">
             <div className="w-full">
               <div className="relative flex items-center p-3 border-b border-gray-300">
