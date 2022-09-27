@@ -16,7 +16,7 @@ export default function Navbar() {
                         </div>
                     </div>
                 </Link>
-                <div className="flex flex-row gap-14 items-center md:flex hidden">
+                <div className="hidden md:flex flex-row gap-14 items-center">
                     <Link to="/">
                         <div className='flex flex-row items-center'>
                             <div className="w-4 h-4 mr-1">
